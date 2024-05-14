@@ -1,21 +1,19 @@
 In the given document are present all the requirements for the ERP system.
 
 1. [Inventory](#inventory)
-   * [Requirements](#requirements)
-     * [Notes](#notes)
+    * [Notes](#notes)
 2. [Sales](#sales)
-   * [Requirements](#requirements)
 3. [Security](#security)
-   * [Requirements](#requirements)
 4. [Providers](#providers)
-   * [Requirements](#requirements)
 5. [Employees](#employees)
 6. [Finances](#finances)
+
 
 ****
 
 # General requirements
 
+- Support for multiple branch offices.
 - Easy to use.
 - Expose robust api's for building external tools.
 - "Easy" to extend in a source code level.
@@ -29,9 +27,7 @@ The system has to support 4 modules:
 
 Module to manage the inventory on warehouse and sales center
 
-### Requirements
-
-- Support for multiple warehouses and sales centers and branchs.
+- Support for multiple warehouses, sales centers and branch offices.
 - Support for building customized repots (as cataloges)
 - Support for product images.
 - Make reports of the current stock from warehouse and sales center
@@ -53,8 +49,6 @@ Module to manage the inventory on warehouse and sales center
 
 Module to manage sales, pricing of the products, promotions, etc.
 
-### Requirements
-
 - Manage pricing of the products
 - Support for barcodes.
 - Have support for special promotions, discounts and combos.
@@ -64,8 +58,6 @@ Module to manage sales, pricing of the products, promotions, etc.
 ## Security
 
 Module to manage security acces, roles and passwords for employees.
-
-### Requirements
 
 - Support for managing roles and fine grade tunning of permissions. 
 - Manage passwords, encryption and security meassures.
@@ -80,30 +72,38 @@ Module to manage security acces, roles and passwords for employees.
 Module to manage providers data and manage orders at a fine level (payment method, orders date,
 payment date, orders arrival, etc).
 
-NOTE:
-orders don't affect finances directly, because the orders may change until the products arrive.
-It is used as a "placeholder"
-
-### Requirements
-
 - Support for cataloges of providers
 - Manage providers data
 - Unsuscribe providers.
 - Manage orders
+
+NOTE:
+orders don't affect finances directly, because the orders may change until the products arrive.
+It is used as a "placeholder"
 
 ## Employees
 
 Module to manage employees data, salary, contract and simple productivity stats.
 payment date, orders arrival, etc).
 
-NOTE:
-the system does not controles ins and outs of work.
-
 - Manage employees data such as salary and contract.
 - Fire employees
 - Manage employee charges and roles
-- Manage basic employees statistics such as faults, vacations, 
+- Manage basic employees statistics such as faults and vacation days
+
+NOTE:
+the system does not controles ins and outs times (for automatic "faults").
 
 ## Finances
 
-TODO: // 
+- Support for accounting entries, ledger and journal (libro mayor y diario).
+- Support various payment styles such as checks, credit cards and cash.
+- Register every financial movement from the other modules.
+- Divide for accounts.
+- Custom reports by date, type of movement, branch office, etc.
+- Export reports to pdf.
+- Simple electronic billing.
+- Support for billing numbers for the current fiscal year (according to the law).
+- Manage financial entries.
+
+****
